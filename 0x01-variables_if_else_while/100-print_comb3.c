@@ -6,28 +6,19 @@
  * Return: always 0 (success)
  */
 int main(void)
-{int x, y, q;
-for (x = 48; x < 58; x++)
-{
-for (y = 49; y < 58; y++)
-{
-	for (q = 50; q < 58; q++)
+{int x, y;
+	for (x = 0; x < 9; x++)
 	{
-		if (q > y && y > x)
+		for (y = x + 1; y < 10; y++)
 		{
-			putchar(x);
-			putchar(y);
-			putchar(q);
-			if (x != 55 || y != 56)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar((x % 10) + '0');
+			putchar((y % 10) + '0');
+			if (x == 8 && y == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
-}
-}
-putchar('\n');
-return (0);
-
+	putchar('\n');
+	return (0);
 }
