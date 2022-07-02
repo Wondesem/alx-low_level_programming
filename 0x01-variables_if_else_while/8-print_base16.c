@@ -7,11 +7,13 @@
  * Return: always 0 (success)
  */
 int main(void)
-{int num;
-char letter;
-for (num = 0; num < 10; num++)
-	putchar((num % 10) + '0');
-for (letter = 'a'; letter <= 'f'; letter++)
-	putchar(letter);
-	putchar('\n');
+{int n;
+char ch;
+for (n = 48; n < 58; n++)
+{
+putchar(n); }
+for (ch = 'a'; ch <= 'f'; ch++)
+{
+putchar(ch); }
+putchar('\n');
 return (0); }
