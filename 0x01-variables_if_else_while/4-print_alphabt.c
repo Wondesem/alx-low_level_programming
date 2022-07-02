@@ -12,6 +12,6 @@ while (ch <= 'z')
 {
 if (ch != 'e' && ch != 'q')
 	{putchar(ch); }
-	ch++;
+	ch++; }
 puchar('\n');
 return (0); }
