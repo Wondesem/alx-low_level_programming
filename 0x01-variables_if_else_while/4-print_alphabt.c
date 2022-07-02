@@ -7,11 +7,11 @@
  * Return: awlways 0 (success)
  */
 int main(void)
-{char ch = 'a';
-while (ch <= 'z')
+{char ch;
+for (ch = 'a'; ch <= 'z'; ch++)
 {
 if (ch != 'e' && ch != 'q')
-	{putchar(ch); }
-	ch++; }
+	putchar(ch);
+}
 puchar('\n');
 return (0); }
