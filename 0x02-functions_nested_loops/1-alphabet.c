@@ -4,7 +4,7 @@
  *  alphabet
  *  followed by new line
  */
-void main(void)
+int main(void)
 {char ch;
 for (ch = 'a'; ch <= 'z'; ch++)
 _putchar(ch);
