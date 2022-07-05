@@ -1,19 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - prints lower case alpabets
- * followed by new line
- *
- * Return: always return 0
+ * main - prints the kower case
+ *  alphabet
+ *  followed by new line
  */
 void print_alphabet(void)
-{
-char ch;
+{char ch;
 for (ch = 'a'; ch <= 'z'; ch++)
 _putchar(ch);
-_putchar('\n');
-return (0); }
-/**
- * int main(void)
-{
-print_alphabet()
-return (0); }*/
+_putchar('\n'); }
