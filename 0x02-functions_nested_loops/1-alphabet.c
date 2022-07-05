@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.c"
 /**
  * main - prints the kower case
  *  alphabet
