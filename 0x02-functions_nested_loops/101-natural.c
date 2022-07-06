@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - prints a multiples of 3 or 5 and below 1024
  *
