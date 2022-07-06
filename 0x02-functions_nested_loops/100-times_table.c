@@ -15,29 +15,34 @@ void print_times_table(int n)
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
+				n3 = n1 * n2;
+				if (n == 0)
+				{
+					_putchar(k + '0');
+				} else if (n3 < 10 && n2 != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(n3 + '0');
+				} else if (n3 >= 10 && n3 < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((n3 / 10) + '0');
+					_putcahr((n3 % 10) + '0');
+				} else if (k >= 100)
+				{
 				_putchar(',');
 				_putchar(' ');
-
-				num3 = num1 * num2;
-				if (num3 <= 99)
-					_putchar(' ');
-				if (num3 <= 9)
-					_putchar(' ');
-				if (num3 <= 100)
-				{
-					_putchar((num3 / 100) + '0');
-					_putchar((num3 / 10) % 10 + '0');
+				_putchar((n3 / 100) + '0');
+				_putchar((n3 / 10) % 10 + '0');
+				_putchar((n3 % 10) + '0');
 				}
-				else if (num3 <= 99 && num3 >= 10)
-				{
-					_putchar((num3 / 10) + '0');
-				}
-				_putchar((num3 % 10) + '0');
 			}
 			_putchar('\n');
 		}
 	}
 }
-
-
-
