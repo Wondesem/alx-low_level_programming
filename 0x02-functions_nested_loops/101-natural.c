@@ -11,9 +11,9 @@ int main(void)
 	for (j = 0; j <= 1024; j++)
 	{
 		if ((j % 3) == 0 || (j % 5))
-			sum + = j;
+			sum += j;
 	}
-	print("%d", sum);
+	printf("%d", sum);
 
 	return (0);
 }

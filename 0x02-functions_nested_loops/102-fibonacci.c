@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - prints Fibonacci sequence starting with 1 & 2
  * followed by new line
@@ -7,7 +7,7 @@
  */
 int main(void)
 {	int count;
-	unsigned long n1 = 0, n2 = 1;
+	unsigned long n1 = 0, n2 = 1, sum;
 
 	for (count = 0; count < 50; count++)
 	{

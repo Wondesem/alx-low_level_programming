@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - prints Fibonacci sequence with starting numbers 1 and 2
  * followed by new line
@@ -23,4 +23,4 @@ int main(void)
 	printf("%.0f", tot_sum);
 
 	return (0);
-
+}
