@@ -21,8 +21,8 @@ int main(void)
 			sum5 = sum5 + j;
 		}
 	}
-	sum = sum3 + sum5;
-	printf("%lu", sum);
+	sum1 = sum3 + sum5;
+	printf("%lu", sum1);
 
 	return (0);
 }
