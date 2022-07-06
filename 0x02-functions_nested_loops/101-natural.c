@@ -6,14 +6,23 @@
  */
 int main(void)
 {	int j;
-	 int sum = 0;
+	unsigned long int sum1, sum3 sum5;
+		sum1 = 0;
+		sum5 = 0;
+		sum3 = 0;
 
 	for (j = 0; j <= 1024; j++)
 	{
-		if ((j % 3) == 0 || (j % 5))
-			sum += j;
+		if ((j % 3) == 0)
+		{
+			sum3 = sum3 + j;
+		} else if ((j % 5) == 0)
+		{
+			sum5 = sum5 + j;
+		}
 	}
-	printf("%d", sum);
+	sum = sum3 + sum5;
+	printf("%lu", sum);
 
 	return (0);
 }
