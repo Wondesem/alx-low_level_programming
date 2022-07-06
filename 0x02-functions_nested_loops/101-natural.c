@@ -6,7 +6,7 @@
  */
 int main(void)
 {	int j;
-	int sum1, sum3, sum5;
+	int long sum1, sum3, sum5;
 		sum1 = 0;
 		sum5 = 0;
 		sum3 = 0;
@@ -22,7 +22,7 @@ int main(void)
 		}
 	}
 	sum1 = sum3 + sum5;
-	printf("%d", sum1);
+	printf("%ld", sum1);
 
 	return (0);
 }
