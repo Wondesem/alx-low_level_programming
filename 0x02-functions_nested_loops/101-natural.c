@@ -5,7 +5,8 @@
  * Return: always 0;
  */
 int main(void)
-{	unsigned int j, sum1, sum3, sum5;
+{	int j;
+	unsigned int sum1, sum3, sum5;
 		sum1 = 0;
 		sum5 = 0;
 		sum3 = 0;
@@ -21,7 +22,7 @@ int main(void)
 		}
 	}
 	sum1 = sum3 + sum5;
-	printf("%ld", sum1);
+	printf("%lu ", sum1);
 
 	return (0);
 }
