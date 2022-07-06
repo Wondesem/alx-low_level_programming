@@ -6,17 +6,18 @@
  * @n: the value to be printed
  */
 void print_times_table(int n)
-{	int num1, num2, num3;
+{	int n1, n2, n3;
 	if (n >= 0 && n <= 15)
 	{
-		for (num1 = 0; num1 <= n; num1++)
+		for (n1 = 0; n1 <= n; n1++)
 		{
 			_putchar('0');
 
-			for (num2 = 1; num2 <= n; num2++)
+
+			for (n2 = 1; n2 <= n; n2++)
 			{
 				n3 = n1 * n2;
-				if (n == 0)
+				if (n2 == 0)
 				{
 					_putchar(k + '0');
 				} else if (n3 < 10 && n2 != 0)
