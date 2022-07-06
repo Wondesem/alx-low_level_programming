@@ -19,7 +19,7 @@ void print_times_table(int n)
 				n3 = n1 * n2;
 				if (n2 == 0)
 				{
-					_putchar(k + '0');
+					_putchar(n3 + '0');
 				} else if (n3 < 10 && n2 != 0)
 				{
 					_putchar(',');
@@ -33,7 +33,7 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 					_putchar((n3 / 10) + '0');
-					_putcahr((n3 % 10) + '0');
+					_putchar((n3 % 10) + '0');
 				} else if (k >= 100)
 				{
 				_putchar(',');
