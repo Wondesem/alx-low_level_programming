@@ -12,7 +12,7 @@ int  a;
 a = 0;
 while (a < 10)
 {
-_putchar(a + '0');
+_putchar((a % 10) + '0');
 a++;
 }
 
