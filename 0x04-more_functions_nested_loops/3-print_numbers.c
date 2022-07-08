@@ -3,17 +3,18 @@
 /**
  * print_numbers -prints numbers from 0 to 9
  * followed by new line
+ * Return: always 0
  */
 void print_numbers(void)
 {
-int a;
+int  a;
 
 a = 0;
-while (a <= 9)
+while (a < 10)
 {
-_putchar(a + '0');
+_putchar(a + 'a');
 a++;
 }
 
-_putchar('\n');
+_putchar('\');
 }
