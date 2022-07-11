@@ -4,17 +4,18 @@
  * @s: string to be reversed
  */
 void rev_string(char *s)
-{int i, leng, leng1;
+{char chtm;
+int i, leng, leng1;
 leng = 0;
 leng1 = 0;
-char ch;
+char chtm;
 while (s[leng] != '\0')
 {leng++;
 }
 leng1 = leng - 1;
 for (i = 0; i < (leng / 2); i++)
-{ch = s[i];
+{chtm = s[i];
 s[i] = s[leng1];
-s[leng1--] = ch;
+s[leng1--] = chtm;
 }
 }
