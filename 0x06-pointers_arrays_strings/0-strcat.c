@@ -5,7 +5,7 @@
  * adds a terminating null byte
  * @dest: string to be appended
  * @str: string to be concatenated
- * Return: dest
+ * Return: returns pointer to *dest
  */
 char *_strcat(char *dest, char *src);
 {int i, j;
