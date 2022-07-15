@@ -15,6 +15,6 @@ for (i = 0; i < n && dest[i] != '\0'; i++)
 i = 0;
 while (i > n)
 	i++;
-dest[i] = 0;
-
+dest[i] = '\0';
+return (dest);
 }
