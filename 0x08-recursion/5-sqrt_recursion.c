@@ -34,5 +34,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 1)
 		return (1);
-	return (_calc_root(num, root));
+	return (_calc_root(n, root));
 }
