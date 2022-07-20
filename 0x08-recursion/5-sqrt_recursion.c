@@ -1,5 +1,8 @@
 
 #include "main.h"
+int _calc_root(int num, int root);
+int _sqrt_recursion(int n);
+
 /**
  * _calc_root - finds root of number tested
  * @num: the number whose root is to be found
