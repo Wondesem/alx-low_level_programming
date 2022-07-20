@@ -8,7 +8,7 @@
  * Return: square root if it has natuar root
  *         (-1) if it does not have natural root
  */
-int _calc_root(int num, int root);
+int _calc_root(int num, int root)
 {
 	if (root * root == num)
 		return (root);
