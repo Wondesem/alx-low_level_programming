@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *  * _strlen - returns the length of a string.
- *   * @s: pointer to String
- *    * Return: Nothing
- *     */
+ * _strlen - returns the length of a string.
+ * @s: pointer to String
+ * Return: Nothing
+ */
 int _strlen(char *s)
 {
 int i = 0;
