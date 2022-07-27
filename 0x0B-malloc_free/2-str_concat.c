@@ -9,6 +9,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
+	int i, j, x, y;
 
 	char *Scon;
 	for (i = 0; s1[i]; i++)
