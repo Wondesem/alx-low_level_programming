@@ -9,25 +9,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, x, y;
+char *str, lenght = 0, lenght1 = 0, lenght2 = 0, i;
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+lenght1 = _strlen(s1);
+lenght2 = _strlen(s2);
+lenght = lenght1 + _strlen(s2) + 1;
+str = malloc(lenght * (sizeof(char)));
+if (str == NULL)
+return (NULL);
+for (i = 0; i < lenght1; i++)
+*(str + i) = *(s1 + i);
+for (i = 0; i <= lenght2; i++)
+*(str + i + lenght1) = *(s2 + i);
+return (str);
+										}
 
-	char *Scon;
-	for (i = 0; s1[i]; i++)
-	{
-		if (s1 == NULL)
-			s1 = "";
-	}
-	for (j = 0; s2[j]; j++)
-	{
-		if (s2 == NULL)
-			s2 = "";
-	}
-	x = i + j +1;
-	Scon = malloc(x * sizeof(char));
-	for (y = 0; y < i; y++)
-		Scon[y] = s1[y];
-	for (y = 0; y < j; y++)
-		Scon[i+j] = s2[y];
-	Scon = '\0';
-	return (Scon);
-}
