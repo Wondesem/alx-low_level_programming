@@ -9,30 +9,43 @@
  */
 int main(int argc, char *argv[])
 {
-int a, n = 0, i, t;
-int c[5] = {25, 10, 5, 2, 1};
+int cents, change;
 if (argc != 2)
 {
-puts("Error");
+printf("Error\n");
 return (1);
 }
-a = atoi(argv[1]);
-if (a <= 0)
+cents = atoi(argv[1]);
+if (cents < 0)
 {
-puts("0");
-return (1);
-}
-else
-{
-for (i = 0; i < 5; i++)
-{
-t = a / c[i];
-a - = t * (c[i]);
-n += t;
-if (a == 0)
-break;
-}
-}
-printf("%d\n", n);
+printf("%d\n", 0);
 return (0);
 }
+if (cents % 25 >= 0)
+{
+change = cents / 25;
+cents = cents % 25;
+}
+if (cents % 10 >= 0)
+{
+change += cents / 10;
+cents = cents % 10;
+}
+if (cents % 5 >= 0)
+{
+change += cents / 5;
+cents = cents % 5;
+}
+if (cents % 2 >= 0)
+{
+change += cents / 2;
+cents = cents % 2;
+}
+if (cents % 1 >= 0)
+{
+change += cents / 1;
+}
+printf("%d\n", change);
+return (0);
+}
+
