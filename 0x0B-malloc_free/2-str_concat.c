@@ -9,32 +9,24 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j, k, l;
-	char *s;
+	unsigned int i, j, x, y;
+	char *Scon;
+	for (i = 0; s1[i]; i++)
+	{
 		if (s1 == NULL)
-			i = 0;
-		else
-		{
-			for (i = 0; s1[i]; i++)
-				;
-		}
-	if (s2 == NULL)
-	{
-		j = 0;
+			s1 == "";
 	}
-	else
+	for (j = 0; s2[j]; j++)
 	{
-		for (j = 0; s2[j]; j++)
-			;
+		if (s2 == NULL)
+			s2 = "";
 	}
-	k = i + j + 1;
-	s = malloc(k * sizeof(char));
-	if (s == NULL)
-		return (NULL);
-	for (l = 0; l < i; l++)
-		s[l] = s1[l];
-	for (l = 0; l < j; l++)
-		s[i + j] = '\0';
-	return (s);
+	x = i + j +1;
+	Scon = malloc(x * sizeof(char));
+	for (y = 0; y < i; y++)
+		Scon[y] = s1[y];
+	for (y = 0; y < j; y++)
+		Scon[i+j] = s2[y];
+	Scon = '\0';
+	return (Scon);
 }
-
