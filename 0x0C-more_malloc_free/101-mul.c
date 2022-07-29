@@ -50,8 +50,10 @@ return (arr);
  */
 char *_zero_iteration(char *s)
 {
-while (*s && *s == '0'
+while (*s && *s == '0')
+{
 s++;
+}
 return (s);
 }
 /**
@@ -61,12 +63,10 @@ return (s);
  */
 int convert_to_digit(char s)
 {
-int digit = s - '0';
+init digit = s - '0';
 if (digit < 0 || digit > 9)
-{
-printf("Error\n");
-exit(98);
-}
+{printf("Error\n");
+exit(98); }
 return (digit);
 }
 /**
