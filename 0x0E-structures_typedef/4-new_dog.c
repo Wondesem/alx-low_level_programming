@@ -1,71 +1,46 @@
-
-#include "dog.h"
 #include <stdlib.h>
-/**
- * _strcpy - function that copies the string pointed to
- * @dest: pointer to string entry data
- * @src: destiny data
- * Return: return value of dest
- */
+#include "dog.h"
 
-void *_strcpy(char *dest, char *src)
-{
-int i = 0;
-if (src != '\0')
-{
-for (i = 0;  *(src + i) != '\0'; i++)
-{
-*(dest + i) = *(src + i);
-}
-}
-*(dest + i) = '\0';
-return (dest);
-}
 /**
- * _strlen - returns the length of a string.
- * @s: pointer to String
- * Return: Nothing
- */
-unsigned int _strlen(char *s)
-{
-unsigned int i = 0;
-while (*(s + i) != '\0')
-{
-i++;
-}
-return (i);
-}
-/**
- * new_dog - function that creates a new dog
- * @name: name to create a new struct
- * @age: age to create a new struct
- * @owner: owner to create a new struct
- *
- * Return: dog struct
+ * new_dog - creates a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *n_dog;
-n_dog =  malloc(sizeof(dog_t));
-if (n_dog)
+unsigned int nl, ol, i;
+dog_t *dog;
+if (name == NULL || owner == NULL)
+return (NULL);
+dog = malloc(sizeof(dog_t));
+if (dog == NULL)
+return (NULL);
+for (nl = 0; name[nl]; nl++)
+;
+nl++;
+dog->name = malloc(nl * sizeof(char));
+if (dog->name == NULL)
 {
-n_dog->name = malloc((_strlen(name) + 1) * sizeof(char));
-if (n_dog->name)
-{
-n_dog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
-if (n_dog->owner)
-{
-_strcpy(n_dog->name, name);
-_strcpy(n_dog->owner, owner);
-n_dog->age = age;
-return (n_dog);
-}
-else
-free(n_dog->name);
-free(n_dog);
-}
-else
-free(n_dog);
-}
+free(dog);
 return (NULL);
 }
+for (i = 0; i < nl; i++)
+dog->name[i] = name[i];
+dog->age = age;
+for (ol = 0; owner[ol]; ol++)
+;
+ol++;
+dog->owner = malloc(ol * sizeof(char));
+if (dog->owner == NULL)
+{
+free(dog->name);
+free(dog);
+return (NULL);
+}
+for (i = 0; i < ol; i++)
+dog->owner[i] = owner[i];
+return (dog);
+}
+
