@@ -19,7 +19,7 @@ str = va_arg(valist, char *);
 if (str)
 printf("%s", str);
 else
-printf(" (nil) ");
+printf("(nil)");
 if (i < n - 1 && separator)
 printf("%s", separator);
 }
