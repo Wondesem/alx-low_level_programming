@@ -1,12 +1,12 @@
 section .text
-global main
+	global main
 main:
-mov ebx,1
-mov ecx,msg
-mov edx,17
-mov eax,4
-int 0x80
-mov eax,0
-int 0x80
+	mov ebx,1
+	mov ecx,msg
+	mov edx,17
+	mov eax,4
+	int 0x80
+	mov eax,0
+	int 0x80
 section .data
-msg db 'Hello, ALXstudents',0xa
+	msg db 'Hello, ALX',0xa
