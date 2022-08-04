@@ -7,12 +7,13 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-unsigned int i;
-i = 0;
-while (i < size)
+unsigned int j;
+if (array && action)
 {
-action(array[i]);
-i++;
+	for (j = 0; j < size; j++)
+	{
+		action(array[j]);
+	}
 }
 }
 
