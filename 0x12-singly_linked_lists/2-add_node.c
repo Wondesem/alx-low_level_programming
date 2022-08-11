@@ -23,19 +23,20 @@ return (i);
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *addnew;
-if (addnew == NULL)
+if (str == NULL)
 return (NULL);
 addnew = malloc(sizeof(list_t));
 if (addnew == NULL)
 return (NULL);
 addnew->str = strdup(str);
-if (!(addnew->str))
+if (addnew->str == NULL)
 {
 free(addnew);
 return (NULL);
 }
 addnew->len = dstrlen(addnew->str);
 addnew->next = *head;
+*head = addnew;
 return (addnew);
 }
 
