@@ -7,13 +7,13 @@
  */
 void free_list(list_t *head)
 {
-list_t *present, next;
-present = head;
-while (present != NULL)
+list_t *current, *next;
+current = head;
+while (current != NULL)
 {
-next = present->next;
-free(present->next);
-free(present);
-present = next;
+next = current->next;
+free(current->str);
+free(current);
+current = next;
 }
 }
