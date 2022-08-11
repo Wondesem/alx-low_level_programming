@@ -6,13 +6,16 @@
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
-{const list_t *ptr
-unsigned int i;
-ptr = h;
-for (i = 0; ptr; i++)
+{size_t nodes = 0;
+
+while (h)
 {
-printf("[%u] %s\n", ptr->len, ptr->str);
-ptr = ptr->next;
+if (h->str == NULL)
+printf("[0] (nil)\n");
+else
+printf("[%d] %s\n", h->len, h->str);
+nodes++;
+h = h->next;
 }
-return (i);
+return (nodes);
 }
