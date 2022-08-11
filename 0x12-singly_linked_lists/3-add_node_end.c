@@ -2,18 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * dstrlen - finds the string lenght
- * @str: the character string
- * Return: the lengh of string
- */
-size_t dstrlen(char *str)
-{
-size_t i;
-for (i = 0; str[i]; i++)
-	;
-return (i);
-}
-/**
  * add_node_end - adds node to the end of list
  * @head: the first node of the list
  * @str: the character string pointer
@@ -21,31 +9,31 @@ return (i);
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *newnode, tmp;
+char *dup;
+int len;
+list_t *new, *last;
+new = malloc(sizeof(list_t));
+if (new == NULL)
+return (NULL);
+dup = strdup(str);
 if (str == NULL)
-return (NULL);
-newnode = malloc(sizeof(list_t));
-if (newnode == NULL)
-return (NULL);
-newnode->str = strdup(str);
-if (newnode->str == NULL)
 {
-free(newnode);
+free(new);
 return (NULL);
 }
-newnode->len = dstrlen(newnode->str);
-newnode->next = NULL;
+for (len = 0; str[len];)
+len++;
+new->str = dup;
+new->len = len;
+ew->next = NULL;
 if (*head == NULL)
+*head = new;
+else
 {
-*head = newnode;
-return (newnode);
+last = *head;
+while (last->next != NULL)
+last = last->next;
+last->next = new;
 }
-tmp = *head;
-while (tmp->next)
-tmp = tmp->next;
-tmp->next = newnode;
-return (newnode);
+return (*head);
 }
-
-
-
