@@ -6,16 +6,14 @@
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
-{size_t link = 0;
-
-while (h != NULL)
+{size_t i = 0;
+const list_t *ptr;
+ptr = h;
+while (ptr)
 {
-if (h->str == NULL)
-printf("[0] (nil)\n");
-else
-printf("[%d] %s\n", h->len, h->str);
-link++;
-h = h->next;
+printf("[%d] %s\n", ptr->len, ptr->str);
+ptr = ptr->next;
+i++;
 }
-return (link);
+return (i);
 }
