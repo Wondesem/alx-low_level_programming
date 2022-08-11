@@ -6,12 +6,9 @@
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
-{
-if (h == NULL)
-printf("The linked list is empty\n");
-const list_t *ptr = NULL;
-ptr = h;
+{const list_t *ptr
 unsigned int i;
+ptr = h;
 for (i = 0; ptr != NULL; i++)
 {
 printf("[%u] %s\n", ptr->len, ptr->str);
