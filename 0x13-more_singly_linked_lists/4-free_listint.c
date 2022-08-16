@@ -4,16 +4,13 @@
  * @head: head pointer in the list
  * Return: void
  */
-void free_listint2(listint_t **head)
+void free_listint(listint_t *head)
 {
 listint_t *tmp;
-if (head == NULL)
-return;
-while (*head)
+while (head != NULL)
 {
-tmp = (*head)->next;
+tmp = head->next;
 free(*head);
-*head = tmp;
+head = tmp;
 }
-head = NULL;
 }
