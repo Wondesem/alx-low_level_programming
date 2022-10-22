@@ -4,17 +4,17 @@
  * @size: size of the hash table
  * Return: pointer to the new table, or NULL on failure
  */
-hash_table_t *shash_table_create(unsigned long int size)
+shash_table_t *shash_table_create(unsigned long int size)
 {
-hash_table_t *sht;
+shash_table_t *sht;
 unsigned long int i;
+
 sht = malloc(sizeof(hash_table_t));
 if (sht == NULL)
 	return (NULL);
-
 sht->size = size;
-sht->head = NULL;
-sht->tail = NULL;
+sht->shead = NULL;
+sht->stail = NULL;
 sht->array = malloc(sizeof(shash_node_t) * size);
 
 if (sht->array == NULL)
@@ -43,7 +43,6 @@ if (shn == NULL)
 	return (NULL);
 
 shn->key = strdup(key);
-
 if (shn->key == NULL)
 {
 free(shn);
@@ -80,7 +79,7 @@ while (tmp != NULL)
 if (strcmp(node->key, tmp->key) < 0)
 {
 node->snext = tmp;
-ode->sprev = tmp->sprev;
+node->sprev = tmp->sprev;
 tmp->sprev = node;
 
 if (node->sprev != NULL)
@@ -148,6 +147,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 unsigned long int index;
 shash_node_t *tmp;
+
 if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 		key == NULL || strlen(key) == 0)
 
@@ -205,7 +205,8 @@ if (flag == 1)
 	printf(", ");
 printf("'%s': '%s'", tmp->key, tmp->value);
 flag = 1;
-tmp = tmp->sprev;								}
+tmp = tmp->sprev;
+}
 printf("}\n");
 }
 /**
