@@ -24,7 +24,7 @@ while (tmp != NULL)
 if (flag == 1)
 	printf(", ");
 
-\printf("'%s': '%s'", tmp->key, tmp->value);
+printf("'%s': '%s'", tmp->key, tmp->value);
 flag = 1;
 tmp->next;
 }
