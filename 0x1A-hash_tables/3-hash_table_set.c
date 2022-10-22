@@ -34,7 +34,7 @@ if (new == NULL)
 free(value_copy);
 return (0);
 }
-new = strdup(key);
+new->key = strdup(key);
 if (new->key == NULL)
 {
 free(new);
