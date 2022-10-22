@@ -26,7 +26,7 @@ if (flag == 1)
 
 printf("'%s': '%s'", tmp->key, tmp->value);
 flag = 1;
-tmp->next;
+tmp = tmp->next;
 }
 }
 printf("}\n");
