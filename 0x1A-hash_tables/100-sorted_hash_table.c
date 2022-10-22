@@ -4,17 +4,17 @@
  * @size: size of the hash table
  * Return: pointer to the new table, or NULL on failure
  */
-shash_table_t *shash_table_create(unsigned long int size)
+hash_table_t *shash_table_create(unsigned long int size)
 {
 hash_table_t *sht;
 unsigned long int i;
-sht = malloc(sizeof(shash_table_t));
+sht = malloc(sizeof(hash_table_t));
 if (sht == NULL)
 	return (NULL);
 
 sht->size = size;
-sht->shead = NULL;
-sht->stail = NULL;
+sht->head = NULL;
+sht->tail = NULL;
 sht->array = malloc(sizeof(shash_node_t) * size);
 
 if (sht->array == NULL)
