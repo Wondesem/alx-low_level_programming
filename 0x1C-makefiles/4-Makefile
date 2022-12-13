@@ -3,7 +3,7 @@ SRC = main.c school.c
 OBD = $(SRC:.c=.0)
 NAME = school
 RM = rm -f
-CFLAGS = walll -werror -wextra -pedantic
+CFLAGS = Walll -Werror -Wextra -pedantic
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
